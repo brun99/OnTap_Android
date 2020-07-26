@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/themFragment">
+
+    <fragment
+        android:id="@+id/themFragment"
+        android:name="vn.edu.ntu.vancuong.ontap_android.ThemFragment"
+        android:label="fragment_them"
+        tools:layout="@layout/fragment_them" >
+        <action
+            android:id="@+id/action_themFragment_to_hienThiFragment"
+            app:destination="@id/hienThiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hienThiFragment"
+        android:name="vn.edu.ntu.vancuong.ontap_android.HienThiFragment"
+        android:label="fragment_hien_thi"
+        tools:layout="@layout/fragment_hien_thi" >
+        <action
+            android:id="@+id/action_hienThiFragment_to_themFragment"
+            app:destination="@id/themFragment" />
+    </fragment>
+</navigation>
